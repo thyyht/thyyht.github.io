@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+    function initLoading(){
+    var ossPre = '';
+//  var loadingImgArr = ['ditu.jpg','banner1.png','banner2.png','balloon.png','paizi.png','san.png','yun.png'];
+    var loadingImgArr = ['https://bufanui-v2.oss-cn-beijing.aliyuncs.com/web/banner_v3_1.jpg'];
+
+    var count = 0;
+    for(var i = 0 ; i < loadingImgArr.length ; i++){
+        var img = new Image();
+        img.src = ossPre+loadingImgArr[i];
+        img.onload = function(){
+            count++;
+            if(count == loadingImgArr.length){
+                complate();
+            }
+        }
+    }
+    function complate(){
+        $('.loading').fadeOut();
+        setTimeout(function(){
+            $('.loading').remove();
+        },100)
+    }
+//            var img = new Image();
+//            img.src = 'http://bufanui-v2.oss-cn-beijing.aliyuncs.com/web/banner_v3_1.jpg';
+//            img.onload = function(){
+//                $('.loading').fadeOut();
+//                setTimeout(function(){
+//                    $('.loading').remove();
+//                },500)
+//            }
+
+
+}
+    </script>
+</body>
+</html>

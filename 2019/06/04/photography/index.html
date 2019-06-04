@@ -16,6 +16,7 @@
 </head>
 
 <body>
+    <div class="loading"><img src="images/loading.gif" alt="" class="loading-img"></div>
     <div class="header">
         <div class="logo">
             <img src="images/logo.png" alt="">
@@ -385,12 +386,11 @@
         var test = $(".content-projects-pc .projects-list");
         var big = $(".content-recommend-pc .projects-list .big");
         for (i = 0; i < big.length; i++) {
-            console.log(big[i])
             $(big[i]).attr("yht", i)
         }
         big.click(function () {
             $(".boli").css("display", "block")
-            console.log("images/recommend" + ($(this).attr("yht") * 1 + 1) + "_color.jpg")
+           
             $(".boli .bigimg").attr("src", "images/recommend" + ($(this).attr("yht") * 1 + 1) + "_color.jpg")
             $(".boli .bigimg").addClass("zoomIn animated")
         })
@@ -477,20 +477,25 @@
                 $(".header .nav").addClass("bounceInRight animated")
             }
         })
-    document.onkeydown = function () {
-        if (window.event && window.event.keyCode == 123) {
-            alert("F12被禁用");
-            event.keyCode = 0;
-            event.returnValue = false;
+        var loadingImg = ["images/banner.jpg","images/banner2.jpg","images/banner3.jpg","images/projects1.jpg","images/projects2.jpg","images/projects3.jpg","images/projects4.jpg"]
+        var n = 0;
+        for(i = 0 ; i < loadingImg.length ; i ++){
+            var img = new Image();
+            img.src = loadingImg[i]
+            console.log(img)
+            img.onload = function(){
+                n++;
+                if(n == loadingImg.length){
+                    removeLoading();
+                }
+            }
         }
-        if (window.event && window.event.keyCode == 13) {
-            window.event.keyCode = 505;
+        function removeLoading(){
+            $(".loading").fadeOut();
+            setTimeout(() => {
+                $(".loading").remove();
+            }, 100);
         }
-        if (window.event && window.event.keyCode == 8) {
-            alert(str + "\n请使用Del键进行字符的删除操作！");
-            window.event.returnValue = false;
-        }
-    }
     </script>
 </body>
 
