@@ -500,9 +500,7 @@ ul {
         font-size: 16px;
         width: 10px; }
     .content-pc .content-about-pc .projects-list:nth-child(1) {
-      background-color: black;
-      margin-right: 15px;
-      width: 288px; }
+      background-color: black; }
     .content-pc .content-about-pc .projects-list:nth-child(2) {
       transform: translateY(-5000px);
       width: 30%;
@@ -515,7 +513,7 @@ ul {
       width: 50%; }
       .content-pc .content-about-pc .projects-list:nth-child(3) .about-text {
         transform: translateX(-3000px);
-        width: 400px;
+        width: 100%;
         height: 508px;
         margin-left: 135px;
         color: #fff;
@@ -544,7 +542,8 @@ ul {
           display: block;
           float: left;
           width: 50%;
-          margin-left: -30px; }
+          margin-left: -30px;
+          height: 100%; }
         .content-pc .content-about-pc .projects-list:nth-child(3) .badwomen .badwomen-text {
           width: 50%;
           display: inline-block;
