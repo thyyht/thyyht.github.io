@@ -243,14 +243,33 @@
             }
         })
         // bounceInLeft animated 左边
-       setTimeout(()=>{
+       
+       $(window).resize(function(){
+        var yht = $(window).width();
+           if($(".header").css("display") == "block"){
+            $(".header-pc").css("display","none")
+           $(".content-pc").css("display","none")
+           }else{
+            $(".header-pc").css("display","block")
+           $(".content-pc").css("display","block")  
+           }
+       })
+       function bigBall(){
+        setTimeout(()=>{
         $("body").css("backgroundColor","black")
         $(".dragonball").remove()
-        $(".header-pc").css("display","block")
-        $(".header-pc").addClass("bounceInLeft animated")
-        $(".content-pc").css("display","block")
-        $(".content-pc").addClass("bounceInLeft animated")
+        if($(".header").css("display") == "block"){
+            $(".header-pc").css("display","none")
+           $(".content-pc").css("display","none")
+           }else{
+            $(".header-pc").css("display","block")
+           $(".content-pc").css("display","block") 
+           $(".header-pc").addClass("bounceInLeft animated")
+     $(".content-pc").addClass("bounceInLeft animated") 
+           }
        },1000)
+           }
+       bigBall();
     </script>
 </body>
 
