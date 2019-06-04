@@ -280,7 +280,7 @@
         <div class="section two fp-auto-height">
             <div class="boli">
                 <img src="images/recommend1_color.jpg" alt="" class="bigimg">
-           </div>
+            </div>
             <ul class="content-recommend-pc">
                 <li class="projects-list"><span class="projects-title">RECOMMEND</span><span
                         class="projects-look">每日推荐</span>
@@ -375,7 +375,7 @@
             </div>
         </div>
     </div>
-  
+
     <script src="js/swiper.min.js"></script>
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery.fullPage.min.js"></script>
@@ -384,22 +384,22 @@
         //  autoScrolling(true);
         var test = $(".content-projects-pc .projects-list");
         var big = $(".content-recommend-pc .projects-list .big");
-        for(i = 0 ; i  < big.length ; i ++){
+        for (i = 0; i < big.length; i++) {
             console.log(big[i])
-           $(big[i]).attr("yht",i) 
+            $(big[i]).attr("yht", i)
         }
-        big.click(function(){
-            $(".boli").css("display","block")
-           console.log("images/recommend" + ($(this).attr("yht")* 1  + 1) + "_color.jpg")
-            $(".boli .bigimg").attr("src","images/recommend" + ($(this).attr("yht") * 1 + 1) + "_color.jpg")
+        big.click(function () {
+            $(".boli").css("display", "block")
+            console.log("images/recommend" + ($(this).attr("yht") * 1 + 1) + "_color.jpg")
+            $(".boli .bigimg").attr("src", "images/recommend" + ($(this).attr("yht") * 1 + 1) + "_color.jpg")
             $(".boli .bigimg").addClass("zoomIn animated")
         })
-        $(".boli").click(function(){
-            $(this).css("display","none")
+        $(".boli").click(function () {
+            $(this).css("display", "none")
         })
-        $(".boli .bigimg").click(function(e){
+        $(".boli .bigimg").click(function (e) {
 
-	        e.stopPropagation();
+            e.stopPropagation();
         })
 
         console.log(big)
@@ -477,7 +477,20 @@
                 $(".header .nav").addClass("bounceInRight animated")
             }
         })
-
+    document.onkeydown = function () {
+        if (window.event && window.event.keyCode == 123) {
+            alert("F12被禁用");
+            event.keyCode = 0;
+            event.returnValue = false;
+        }
+        if (window.event && window.event.keyCode == 13) {
+            window.event.keyCode = 505;
+        }
+        if (window.event && window.event.keyCode == 8) {
+            alert(str + "\n请使用Del键进行字符的删除操作！");
+            window.event.returnValue = false;
+        }
+    }
     </script>
 </body>
 
