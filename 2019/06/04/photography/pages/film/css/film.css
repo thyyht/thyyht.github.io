@@ -1,0 +1,335 @@
+body {
+  background-color: #fff; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+a {
+  text-decoration: none; }
+
+ul {
+  list-style: none; }
+
+.header {
+  display: none; }
+
+.dragonball {
+  position: fixed;
+  left: -50px;
+  top: -50px;
+  background-color: black;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  animation: thy 1.5s; }
+
+.header-pc {
+  display: none;
+  width: 100%;
+  height: 57px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999; }
+  .header-pc .logo img {
+    float: left;
+    width: 43px;
+    height: 27px;
+    margin-top: 22px;
+    margin-left: 42px; }
+  .header-pc .nav {
+    position: absolute;
+    width: 435px;
+    height: 35px;
+    top: 23px;
+    right: 0; }
+    .header-pc .nav .nav-list {
+      font-size: 12px;
+      margin-left: 35px;
+      float: left;
+      height: 100%; }
+      .header-pc .nav .nav-list a {
+        width: 100%;
+        display: block;
+        color: #969697; }
+        .header-pc .nav .nav-list a .ball {
+          display: block;
+          width: 3px;
+          height: 3px;
+          border-radius: 50%;
+          background-color: transparent;
+          margin-left: 9px;
+          margin-top: 5px; }
+        .header-pc .nav .nav-list a:hover {
+          color: #fff; }
+          .header-pc .nav .nav-list a:hover .ball {
+            background-color: #fff; }
+        .header-pc .nav .nav-list a .search {
+          width: 20px;
+          height: 20px; }
+          .header-pc .nav .nav-list a .search:hover {
+            background-image: url(../images/searchclick.png);
+            background-size: 20px 20px; }
+    .header-pc .nav .nav-list.active a {
+      color: #fff; }
+    .header-pc .nav .nav-list.active .ball {
+      background-color: #fff; }
+    .header-pc .nav .nav-list.left {
+      margin-left: 0; }
+    .header-pc .nav .nav-list.search {
+      margin-left: 110px; }
+
+.content-pc {
+  display: none; }
+  .content-pc .content-projects-pc {
+    display: block;
+    width: 100%;
+    height: 732px; }
+    .content-pc .content-projects-pc .projects-list {
+      position: relative;
+      height: 100%;
+      width: 20%;
+      box-sizing: border-box;
+      border: 3px solid transparent;
+      color: #fff;
+      float: left;
+      background-color: black;
+      overflow: hidden; }
+      .content-pc .content-projects-pc .projects-list .list-depict {
+        position: absolute;
+        display: none;
+        width: 100%;
+        height: 254px;
+        background-color: red;
+        bottom: 0;
+        font-size: 13px;
+        color: #fff; }
+        .content-pc .content-projects-pc .projects-list .list-depict .depict-title {
+          margin-top: 74px; }
+        .content-pc .content-projects-pc .projects-list .list-depict .depict-text {
+          display: inline-block;
+          width: 100%;
+          margin-top: 15px;
+          color: #e2e0e0;
+          font-size: 10px; }
+      .content-pc .content-projects-pc .projects-list .projects-title {
+        display: block;
+        position: absolute;
+        top: 70px;
+        left: 42px;
+        font-size: 48px;
+        transform: rotate(90deg);
+        transform-origin: 0 100%; }
+      .content-pc .content-projects-pc .projects-list .projects-look {
+        display: block;
+        position: absolute;
+        top: 135px;
+        left: 110px;
+        font-size: 16px;
+        width: 10px; }
+      .content-pc .content-projects-pc .projects-list .projects-nav {
+        position: absolute;
+        bottom: 255px;
+        left: 55px;
+        width: 200px;
+        height: 70px; }
+        .content-pc .content-projects-pc .projects-list .projects-nav .projects-nav-list:nth-child(even) {
+          width: 5px;
+          margin-left: 10px;
+          margin-right: 10px; }
+        .content-pc .content-projects-pc .projects-list .projects-nav .projects-nav-list:first-child {
+          width: 25px; }
+        .content-pc .content-projects-pc .projects-list .projects-nav .projects-nav-list {
+          font-size: 12px;
+          height: 30px;
+          width: 48px;
+          color: #969697;
+          float: left; }
+          .content-pc .content-projects-pc .projects-list .projects-nav .projects-nav-list a {
+            color: #969697; }
+            .content-pc .content-projects-pc .projects-list .projects-nav .projects-nav-list a:hover {
+              color: #fff; }
+        .content-pc .content-projects-pc .projects-list .projects-nav .projects-nav-list.active a {
+          color: #fff; }
+      .content-pc .content-projects-pc .projects-list .list-ball {
+        display: none;
+        position: absolute;
+        left: 50%;
+        margin-left: -18px;
+        bottom: 60px;
+        font-size: 16px;
+        color: #fff;
+        width: 35px;
+        height: 35px;
+        border: 1px solid #fff;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 35px; }
+    .content-pc .content-projects-pc .projects-list:first-child {
+      margin-right: 0; }
+    .content-pc .content-projects-pc .projects-list:nth-child(2) {
+      background-image: url(../images/projects1.jpg); }
+    .content-pc .content-projects-pc .projects-list:nth-child(3) {
+      background-image: url(../images/projects2.jpg); }
+    .content-pc .content-projects-pc .projects-list:nth-child(4) {
+      background-image: url(../images/projects3.jpg); }
+    .content-pc .content-projects-pc .projects-list:nth-child(5) {
+      background-image: url(../images/projects4.jpg); }
+    .content-pc .content-projects-pc .projects-list.active {
+      border: solid 3px red; }
+      .content-pc .content-projects-pc .projects-list.active .list-depict,
+      .content-pc .content-projects-pc .projects-list.active .list-ball {
+        display: block; }
+  .content-pc .content-projects-pc.two {
+    margin-top: 50px; }
+    .content-pc .content-projects-pc.two .projects-list:nth-child(2) {
+      background-image: url(../images/projects5.jpg); }
+    .content-pc .content-projects-pc.two .projects-list:nth-child(3) {
+      background-image: url(../images/projects6.jpg); }
+    .content-pc .content-projects-pc.two .projects-list:nth-child(4) {
+      background-image: url(../images/projects7.jpg); }
+    .content-pc .content-projects-pc.two .projects-list:nth-child(5) {
+      background-image: url(../images/projects8.jpg); }
+
+@keyframes thy {
+  0% {
+    width: 100px;
+    height: 100px; }
+  100% {
+    left: -2500px;
+    top: -2500px;
+    width: 5000px;
+    height: 5000px; } }
+.content {
+  display: none; }
+
+@media screen and (max-width: 1224px) {
+  .header-pc {
+    display: none; }
+
+  .header {
+    display: block;
+    width: 100%;
+    height: 57px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999; }
+    .header .logo img {
+      position: absolute;
+      float: left;
+      width: 43px;
+      height: 27px;
+      margin-top: 22px;
+      margin-left: 5.46875%;
+      z-index: 800; }
+    .header .more {
+      position: absolute;
+      right: 30px;
+      top: 50%;
+      width: 20px;
+      height: 20px;
+      margin-top: -12px;
+      z-index: 800; }
+      .header .more .close {
+        display: block;
+        width: 20px;
+        height: 2px;
+        background-color: #fff;
+        margin-top: 6px; }
+      .header .more .close.one {
+        margin-top: 0; }
+    .header .more.close .close.two {
+      background-color: transparent; }
+    .header .more.close .close.one {
+      position: absolute;
+      left: 2px;
+      top: 0;
+      width: 25px;
+      transform-origin: 0% 0%;
+      transform: rotate(45deg);
+      transition: 1s all; }
+    .header .more.close .close.three {
+      position: absolute;
+      left: 2px;
+      bottom: 0;
+      width: 25px;
+      transform-origin: bottom left;
+      transform: rotate(-45deg);
+      transition: 1s all; }
+    .header .nav {
+      display: none;
+      position: absolute;
+      width: 100%;
+      top: 0;
+      right: 0;
+      text-align: center; }
+      .header .nav .nav-list {
+        background-color: black;
+        font-size: 12px;
+        height: 57px;
+        line-height: 57px; }
+        .header .nav .nav-list a {
+          color: #fff; }
+
+  .content-pc {
+    display: none; }
+
+  .content {
+    display: block;
+    width: 100%;
+    background-color: black;
+    padding-top: 50px; }
+    .content .content-projects {
+      display: block;
+      width: 100%;
+      background-color: black; }
+      .content .content-projects .projects-mobile {
+        padding-top: 25px;
+        width: 100%;
+        height: 100px;
+        color: #fff;
+        text-align: center; }
+        .content .content-projects .projects-mobile .projects-title {
+          font-size: 18px; }
+        .content .content-projects .projects-mobile .projects-look {
+          font-size: 12px; }
+        .content .content-projects .projects-mobile .projects-nav {
+          margin: 20px auto;
+          width: 200px;
+          height: 70px;
+          font-size: .113333rem; }
+          .content .content-projects .projects-mobile .projects-nav .projects-nav-list:nth-child(even) {
+            width: 5px;
+            margin-left: 10px;
+            margin-right: 10px; }
+          .content .content-projects .projects-mobile .projects-nav .projects-nav-list:first-child {
+            width: 25px; }
+          .content .content-projects .projects-mobile .projects-nav .projects-nav-list {
+            font-size: 12px;
+            height: 30px;
+            width: 48px;
+            color: #969697;
+            float: left; }
+            .content .content-projects .projects-mobile .projects-nav .projects-nav-list a {
+              color: #969697; }
+              .content .content-projects .projects-mobile .projects-nav .projects-nav-list a:hover {
+                color: #fff; }
+          .content .content-projects .projects-mobile .projects-nav .projects-nav-list.active a {
+            color: #fff; }
+      .content .content-projects .projects-list {
+        height: 180px;
+        width: 322px;
+        overflow: hidden;
+        color: #fff;
+        background-color: black;
+        margin: 15px auto; }
+        .content .content-projects .projects-list img {
+          display: block;
+          width: 80%;
+          margin: 0 auto; }
+      .content .content-projects .projects-list:nth-child(2) {
+        margin-top: 45px; } }
+
+/*# sourceMappingURL=film.css.map */

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="logo">
+            <img src="images/logo.png" alt="">
+        </div>
+        <div class="more">
+            <span class="close one"></span>
+            <span class="close two"></span>
+            <span class="close three"></span>
+        </div>
+        <ul class="nav">
+            <li class="nav-list"></li>
+            <li class="nav-list"><a href="../../index.html">首页</a>
+            </li>
+            <li class="nav-list"><a href="">关于</a></li>
+            <li class="nav-list"><a href="../film/index.html">摄影</a></li>
+            <li class="nav-list"><a href="../news/index.html">新闻</a></li>
+            <li class="nav-list"><a href="../contact/index.html">联系</a></li>
+        </ul>
+    </div>
+    <div class="header-pc">
+        <div class="logo">
+            <img src="images/logo.png" alt="">
+        </div>
+        <ul class="nav">
+            <li class="nav-list left"><a href="../../index.html">首页<span class="ball"></span></a>
+
+            </li>
+            <li class="nav-list"><a href="">关于<span class="ball"></span></a></li>
+            <li class="nav-list"><a href="../film/index.html">摄影<span class="ball"></span></a></li>
+            <li class="nav-list"><a href="../news/index.html">新闻<span class="ball"></span></a></li>
+            <li class="nav-list  active"><a href="../contact/index.html">联系<span class="ball"></span></a></li>
+            <li class="nav-list search"><a href=""><img src="images/search.png" alt="" class="search"></a></li>
+        </ul>
+    </div>
+    <div class="footer">
+        <div class="footer-contact">
+            <div class="projects-list"><span class="projects-title">CONTACT</span>
+                <p class="projects-look">联系我们</p>
+            </div>
+            <div class="footer-right">
+                <div class="footer-details">
+                    <h2 class="details-title">WESTON</h2>
+                    <p class="details-text">地址：河南省郑州市金水区南阳路升龙汇金2108<br>
+                        邮编：450000<br>
+                        电话：400-887-3482<br>
+                        手机：1763224789 / 13347699468<br>
+                        邮箱：37654219@ｑｑ.com<br>
+                        传真：000-66762390</p>
+                    <img src="images/footer2.png" alt="">
+                </div>
+            </div>
+            <ul class="footer-table">
+                <li><input type="text" placeholder="姓名"></li>
+                <li><input type="text" placeholder="电话"></li>
+                <li><input type="text" placeholder="邮政"></li>
+                <li><input type="text" placeholder="内容" class="table-text"></li>
+                <a href="" class="submit">提交</a>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-pc">
+            <div class="footer-contact-pc">
+                <div class="projects-list"><span class="projects-title">CONTACT</span><span
+                        class="projects-look">联系我们</span>
+                </div>
+                <div class="footer-right">
+                    <div class="footer-details">
+                        <h2 class="details-title">WESTON</h2>
+                        <p class="details-text">地址：河南省郑州市金水区南阳路升龙汇金2108<br>
+                            邮编：450000<br>
+                            电话：400-887-3482<br>
+                            手机：1763224789 / 13347699468<br>
+                            邮箱：37654219@ｑｑ.com<br>
+                            传真：000-66762390</p>
+                        <img src="images/footer2.png" alt="">
+                    </div>
+                </div>
+                <ul class="footer-table">
+                    <li><input type="text" placeholder="姓名"></li>
+                    <li><input type="text" placeholder="电话"></li>
+                    <li><input type="text" placeholder="邮政"></li>
+                    <li><input type="text" placeholder="内容" class="table-text"></li>
+                    <a href="" class="submit">提交</a>
+                </ul>
+            </div>
+
+        </div>
+    <script src="js/jquery.min.js"></script>
+    <script>
+        $(".more").click(function () {
+            $(".header .nav").css("display", "block")
+            if ($(this).hasClass("close")) {
+                $(this).removeClass("close")
+                $(".header .nav").removeClass("bounceInRight animated")
+                $(".header .nav").addClass("bounceOutRight animated")
+
+            } else {
+                $(this).addClass("close")
+
+                $(".header .nav").removeClass("bounceOutRight animated")
+                $(".header .nav").addClass("bounceInRight animated")
+            }
+        })
+        $(".footer-pc").addClass("active")
+    </script>
+</body>
+
+</html>
