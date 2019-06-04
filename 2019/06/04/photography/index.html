@@ -9,7 +9,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/jquery.fullPage.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/css/swiper.min.css">
     <link rel="stylesheet" href="css/animate.min.css">
 
 
@@ -377,7 +377,7 @@
         </div>
     </div>
 
-    <script src="js/swiper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.min.js"></script>
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery.fullPage.min.js"></script>
 
@@ -477,7 +477,7 @@
                 $(".header .nav").addClass("bounceInRight animated")
             }
         })
-        var loadingImg = ["images/banner.jpg","images/banner2.jpg","images/banner3.jpg","images/projects1.jpg","images/projects2.jpg","images/projects3.jpg","images/projects4.jpg"]
+        var loadingImg = ["images/banner.jpg","images/banner2.jpg","images/banner3.jpg","images/projects1.jpg","images/projects2.jpg","images/projects3.jpg","images/projects4.jpg","images/recommend1_color.jpg","images/recommend2_color.jpg","images/recommend3_color.jpg","images/recommend4_color.jpg","images/recommend5_color.jpg","images/recommend6_color.jpg"]
         var n = 0;
         for(i = 0 ; i < loadingImg.length ; i ++){
             var img = new Image();
@@ -494,8 +494,11 @@
             $(".loading").fadeOut();
             setTimeout(() => {
                 $(".loading").remove();
-            }, 100);
+            }, 1000);
         }
+        setTimeout(() =>{
+            $(".loading").remove();
+        },5000)
     </script>
 </body>
 
